@@ -23,6 +23,17 @@ contract Lottery {
         seed = (seed + block.timestamp + uint256(uint160(address(msg.sender)))) % 1000;
 
     }
+
+
+    // contract for logic issues
+
+    function add(uint a, uint b) public returns(uint) {
+        return a - b;
+    }
+
+    function sub(uint a, uint b) public returns(uint) {
+        return a + b;
+    }
 }
 
 
